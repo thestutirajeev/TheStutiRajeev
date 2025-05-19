@@ -1,6 +1,4 @@
-# 💼 Stuti Rajeev - Portfolio
-
-## 🔗 Live Demo
+## 🔗 View my Portfolio
 
 [Visit My Portfolio](https://the-stuti-rajeev.vercel.app/)
 
