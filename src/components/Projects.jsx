@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Github } from "lucide-react";
+import { Github, LinkIcon } from "lucide-react";
 import backgroundimage from "../assets/bg1.png";
 import ProjectSS from "./ProjectSS"; // Import the popup component
 import rto1 from "../assets/screenshots/rto1.png";
@@ -16,7 +16,23 @@ import nim5 from "../assets/screenshots/nim5.png";
 import nim6 from "../assets/screenshots/nim6.png";
 import nim7 from "../assets/screenshots/nim7.png";
 import nim8 from "../assets/screenshots/nim8.jpeg";
+import markspred from "../assets/screenshots/markspred.png";
+import resaitool from "../assets/screenshots/resaitool.png";
+import { m } from "framer-motion";
 const projects = [
+  {
+    name: "Resume Screening Tool",
+    techStack: ["Python", "Streamlit", "spaCy", "NLP"],
+    description: "AI-Powered HR Assistant for Resume Screening",
+    features: [
+      "Automated resume screening using NLP techniques.",
+      "Streamlit interface for easy interaction.",
+      "spaCy for advanced text processing and analysis."
+    ],
+    github: "https://github.com/thestutirajeev/Resume_Screening_Tool",
+    images: [resaitool],
+    live: "https://resume-screening-tool-k0df.onrender.com/"
+  },
   {
     name: "RTO Connect",
     techStack: ["MongoDB", "Express", "React", "Node.js", "JWT", "Stripe", "DialogFlow"],
@@ -27,7 +43,21 @@ const projects = [
       "Developed a chatbot using DialogFlow for instant user assistance."
     ],
     github: "https://github.com/thestutirajeev/rto-connect",
-    images: [rto1, rto2, rto3, rto4, rto5, rto6]
+    images: [rto1, rto2, rto3, rto4, rto5, rto6],
+    live:""
+  },
+  {
+    name: "Student Performance Prediction System",
+    techStack: ["Python", "Machine Learning", "Flask", "Tailwind"],
+    description: "Machine Learning Application for Predictive Analytics of Student Performance",
+    features: [
+      "Predicts student performance using machine learning model based on socio-academic factors.",
+      "Flask backend with a responsive Tailwind CSS frontend.",
+      "Interactive user interface for data input and result display."
+    ],
+    github: "https://github.com/thestutirajeev/Student-Performance-Prediction",
+    images: [markspred],
+    live: "https://student-performance-prediction-rose.vercel.app/"
   },
   {
     name: "Swasth Saarthi",
@@ -39,7 +69,8 @@ const projects = [
       "Appointment booking and health event tracking."
     ],
     github: "https://github.com/thestutirajeev/SwasthSaarthi",
-    images: []
+    images: [],
+    live:""
   },
   {
     name: "Stock Master",
@@ -51,7 +82,8 @@ const projects = [
       "Interactive GUI for stock trend analysis."
     ],
     github: "https://github.com/thestutirajeev/Stock_Master",
-    images: []
+    images: [],
+    live:""
   },
   {
     name: "Nimantran",
@@ -63,7 +95,8 @@ const projects = [
       "Personalized templates and gift-sending features."
     ],
     github: "https://github.com/thestutirajeev/nimantran",
-    images: [nim1, nim2, nim3, nim4, nim5, nim6, nim7, nim8]
+    images: [nim1, nim2, nim3, nim4, nim5, nim6, nim7, nim8],
+    live:""
   },
 ];
 
@@ -84,7 +117,7 @@ const Projects = () => {
       <h2 className="text-4xl md:text-5xl font-bold text-brown-700 mb-12 text-center">
         Projects
       </h2>
-      <div className="space-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8">
         {projects.map((project, index) => (
           <div
             key={index}
@@ -96,6 +129,19 @@ const Projects = () => {
                 {project.name}
               </h3>
               <div className="flex items-center gap-3">
+  {    /* Live link button */   }
+  {project.live.length > 0 && (
+    <a
+      href={project.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={(e) => e.stopPropagation()}
+      className="w-20 h-10 rounded-full border border-brown-500 flex items-center justify-center hover:bg-brown-100"
+    >
+      Live
+      <LinkIcon className="w-5 h-5 text-brown-700" />
+    </a>
+  )}
   {/* GitHub Icon with circle */}
   <a
     href={project.github}

@@ -4,8 +4,11 @@ import {
 } from "react-icons/fa";
 import {
   SiCplusplus, SiSpringboot, SiMongodb, SiMysql, SiPostman,
-  SiDialogflow, SiStripe, SiExpress,
+  SiDialogflow, SiStripe, SiExpress, SiHtml5, SiCss3, SiJavascript,
+  SiJupyter, SiStreamlit, SiSpacy, SiNumpy,
 } from "react-icons/si";
+import { TbBrandOpenai, TbBrain } from "react-icons/tb";
+import { GrDocumentText } from "react-icons/gr";
 
 const skillsData = [
   {
@@ -17,7 +20,7 @@ const skillsData = [
     ],
   },
   {
-    category: "Frameworks/Stacks",
+    category: "Frameworks / Stacks",
     skills: [
       { name: "Spring Boot", icon: <SiSpringboot className="text-green-700" /> },
       {
@@ -42,12 +45,36 @@ const skillsData = [
     ],
   },
   {
+    category: "Web Technologies",
+    skills: [
+      { name: "HTML", icon: <SiHtml5 className="text-orange-600" /> },
+      { name: "CSS", icon: <SiCss3 className="text-blue-500" /> },
+      { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+      { name: "React.js", icon: <FaReact className="text-blue-400" /> },
+      { name: "Node.js", icon: <FaNodeJs className="text-green-600" /> },
+      { name: "Express.js", icon: <SiExpress className="text-gray-700" /> },
+      { name: "JSP / Servlet", icon: <GrDocumentText className="text-gray-600" /> },
+      { name: "Thymeleaf", icon: <GrDocumentText className="text-green-700" /> },
+    ],
+  },
+  {
     category: "Tools & Platforms",
     skills: [
       { name: "Git", icon: <FaGitAlt className="text-red-600" /> },
       { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
       { name: "DialogFlow", icon: <SiDialogflow className="text-yellow-400" /> },
       { name: "Stripe API", icon: <SiStripe className="text-indigo-700" /> },
+    ],
+  },
+  {
+    category: "AI & Automation",
+    skills: [
+      { name: "Prompt Engineering", icon: <TbBrain className="text-pink-500" /> },
+      { name: "ChatGPT", icon: <TbBrandOpenai className="text-teal-500" /> },
+      { name: "spaCy", icon: <SiSpacy className="text-purple-600" /> },
+      { name: "Streamlit", icon: <SiStreamlit className="text-pink-500" /> },
+      { name: "PyMuPDF", icon: <GrDocumentText className="text-red-500" /> },
+      { name: "NLP", icon: <SiJupyter className="text-orange-500" /> },
     ],
   },
 ];
