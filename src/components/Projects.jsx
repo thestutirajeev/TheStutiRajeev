@@ -29,7 +29,7 @@ const projects = [
       "Streamlit interface for easy interaction.",
       "spaCy for advanced text processing and analysis."
     ],
-    github: "https://github.com/thestutirajeev/Resume_Screening_Tool",
+    github: "https://github.com/thestutirajeev/Resume-Screening-Tool",
     images: [resaitool],
     live: "https://resume-screening-tool-k0df.onrender.com/"
   },
